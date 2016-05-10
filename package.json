@@ -1,6 +1,6 @@
 {
   "name": "pimatic-bmp180",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "pimatic plugin for the bmp180 barometric pressure sensor",
   "main": "index.js",
   "files": [
