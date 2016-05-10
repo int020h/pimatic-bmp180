@@ -4,8 +4,9 @@
   "description": "pimatic plugin for the bmp180 barometric pressure sensor",
   "main": "index.js",
   "files": [
-    "pimatic-bmp180.coffee",
     "README.md",
+    "pimatic-bmp180.coffee",
+    "device-config-schema.coffee",
     "pimatic-bmp180-config-schema.coffee"
   ],
   "scripts": {
