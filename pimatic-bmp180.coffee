@@ -43,8 +43,6 @@ module.exports = (env) ->
     #     
     # 
     init: (app, @framework, @config) =>
-      env.logger.info("Hello World")
-      #deviceConfigDef = require("./pimatic-bmp180-config-schema.coffee")
       deviceConfigDef = require("./device-config-schema")
 
       @framework.deviceManager.registerDeviceClass("BMP180Sensor", {
