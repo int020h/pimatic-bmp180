@@ -9,7 +9,7 @@ Wiring schema
 =======================
 ![wiring schema](https://github.com/int020h/pimatic-bmp180/blob/master/RPi%20%2B%20BMP180.png)
 
-(Note: the wiring schema doesn't who properly on NPM; use the github link to see it)
+(Note: the wiring schema doesn't show properly on NPM; use the github link to see it)
 
 This schema describes the GY-68 module featuring the BMP180 sensor. For other modules refer to the datasheets.
 
