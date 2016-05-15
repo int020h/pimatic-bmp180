@@ -54,3 +54,5 @@ And this to your **devices** section:
     {... any other devices you have configured ...}
 ```
 Of course you may need to adjust the device, address and interval parameters. The interval parameter is the sensor poll interval in ms.
+
+After configuration restarting pimatic should install the plugin automatically from the NPM repository.
