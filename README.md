@@ -2,6 +2,7 @@ pimatic-bmp180
 =======================
 
 Add support for the BMP180 barometric pressure sensor to pimatic.
+
 This plugin will show you the pressure (QNH) in hectopascal (HPa) and temperature (T) in degrees Celsius (°C).
 
 Wiring schema
@@ -9,6 +10,7 @@ Wiring schema
 ![wiring schema](https://github.com/int020h/pimatic-bmp180/blob/master/RPi%20%2B%20BMP180.png)
 
 (Note: the wiring schema doesn't who properly on NPM; use the github link to see it)
+
 This schema describes the GY-68 module featuring the BMP180 sensor. For other modules refer to the datasheets.
 
 raspberry pi pin | wire colour | BMP180 sensor pin
@@ -56,4 +58,4 @@ And this to your **devices** section:
 ```
 Of course you may need to adjust the device, address and interval parameters. The interval parameter is the sensor poll interval in ms.
 
-After configuration restarting pimatic should install the plugin automatically from the NPM repository.
+After configuration, restarting pimatic should install the plugin automatically from the NPM repository.
