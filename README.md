@@ -8,6 +8,8 @@ Wiring schema
 =======================
 ![wiring schema](https://github.com/int020h/pimatic-bmp180/blob/master/RPi%20%2B%20BMP180.png)
 
+This schema describes the GY-68 module featuring the BMP180 sensor. For other modules refer to the datasheets.
+
 raspberry pi pin | wire colour | BMP180 sensor pin
 -----------------|-------------|------------------
 1 (3V3)*         | red         | VIN
@@ -16,7 +18,6 @@ raspberry pi pin | wire colour | BMP180 sensor pin
 5 (SCL1 I2C)     | blue        | SCL
 
 *Note that the BMP180 sensor requires 3.3V and will fry at 5V!
-Picture above shows the GY-68 module featuring the BMP180 sensor.
 
 Raspberry pi setup
 =======================
