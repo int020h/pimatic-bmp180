@@ -18,6 +18,7 @@
   },
   "keywords": [
     "pimatic",
+    "plugin",
     "bmp180"
   ],
   "author": "int020h",
