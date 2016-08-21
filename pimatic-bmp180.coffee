@@ -73,37 +73,38 @@ module.exports = (env) ->
     _temperature: null
 
     constructor: (@config, lastState) ->
-      @id = config.id
-      @name = config.name
+      @id = @config.id
+      @name = @config.name
       @_pressure = lastState?.pressure?.value
       @_temperature = lastState?.temperature?.value
-      BMP180 = require 'sensor_bmp085'
+
+      BMP180 = require 'bmp085'
       @sensor = new BMP180({
-        'address': config.address,
-        'device': config.device,
-        'sensorMode': 'ultraHighRes',
-        'maxTempAge': 1
+        'mode': 1,
+        'address': parseInt(@config.address),
+        'device': @config.device
       });
 
-      @sensor.init()
-      
       Promise.promisifyAll(@sensor)
 
       super()
 
       @requestValue()
-      setInterval( ( => @requestValue() ), @config.interval)
+      @requestValueIntervalId = setInterval( ( => @requestValue() ), @config.interval)
+    
+    destroy: () ->
+      clearInterval @requestValueIntervalId if @requestValueIntervalId?
+      super()
 
     requestValue: ->
-      @sensor.getPressure( (error, value) =>
-        if value > -50
-          @_pressure = value
-          @emit 'pressure', value
-      )
-      @sensor.getTemperature( (error, value) =>
-        if value > -50
-          @_temperature = value
-          @emit 'temperature', value
+      @sensor.read( (data) =>
+        if data.pressure > -50
+          @_pressure = data.pressure
+          @emit 'pressure', data.pressure
+      
+        if data.temperature > -50
+          @_temperature = data.temperature
+          @emit 'temperature', data.temperature
       )
 
     getPressure: -> Promise.resolve(@_pressure)

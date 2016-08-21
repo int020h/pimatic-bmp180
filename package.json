@@ -1,6 +1,6 @@
 {
   "name": "pimatic-bmp180",
-  "version": "1.0.1",
+  "version": "2.0.0",
   "description": "pimatic plugin for the bmp180 barometric pressure sensor",
   "main": "pimatic-bmp180",
   "files": [
@@ -29,13 +29,13 @@
   "homepage": "https://github.com/int020h/pimatic-bmp180#readme",
   "configSchema": "pimatic-bmp180-config-schema.coffee",
   "dependencies": {
-    "sensor_bmp085": "0.2.0"
+    "bmp085": "0.4.0"
   },
   "peerDependencies": {
-    "pimatic": "0.8.*"
+    "pimatic": "0.9.*"
   },
   "engines": {
-    "node": ">0.8.x",
-    "npm": ">1.1.x"
+    "node": ">4.4.x",
+    "npm": ">2.15.x"
   }
 }
